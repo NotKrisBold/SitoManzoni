@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1; /* Assicura che il testo sia sopra l'immagine */
+  }
+  
+  .first-overlay {
+    top: 30%; /* Regola la posizione verticale come preferisci */
+  }
+  
+  .second-overlay {
+    top: 70%; /* Regola la posizione verticale come preferisci */
+  }
+  
+  .text-box {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opzionale: aggiunge una leggera ombra al rettangolo */
+    width: 95%; /* Assicura che il rettangolo prenda tutta la larghezza disponibile */
+    max-width: 95%; /* Impedisce che il rettangolo diventi più largo dello schermo */
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza totale */
+  }
+  
+  p {
+    margin: 0; /* Rimuove il margine predefinito del paragrafo */
+  }
+  
