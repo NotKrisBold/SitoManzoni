@@ -5,11 +5,21 @@
   }
 
   .custom-nav-link {
-    color: #222020 !important; /* Colore scuro per i link (puoi scegliere qualsiasi tonalità di scuro) */
+    color: #222020 !important; /* Colore scuro per i link */
     font-size: 1.2rem;
     font-weight: 500;
   }
 
   .custom-nav-link:hover {
     color: #000 !important; /* Colore più scuro al passaggio del mouse */
+  }
+
+  @media (max-width: 768px) {
+    .custom-nav-link {
+      font-size: 1rem; /* Riduce il font sui dispositivi mobili */
+    }
+
+    .custom-navbar {
+      padding: 0.5rem 1rem; /* Riduce il padding per un aspetto più compatto sui cellulari */
+    }
   }
