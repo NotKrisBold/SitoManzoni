@@ -1,22 +1,12 @@
+<app-navbar></app-navbar>
+
 <div class="parallax-container">
-    <div class="image">
-      <img src="../../assets/images/casa1.jpg" ngx-parallax />
-    </div>
-    
-    <div class="text-overlay first-overlay">
+  <div class="image-container" #imageContainer *ngFor="let img of imagesArray; let i = index">
+    <img #image src="{{img.src}}" ngx-parallax />
+    <div class="text-overlay" #textOverlay *ngIf="textsArray[i]">
       <div class="text-box">
-        <p>Questo è il testo sopra la prima immagine</p>
-      </div>
-    </div>
-  
-    <div class="image">
-      <img src="../../assets/images/casa2.jpg" ngx-parallax />
-    </div>
-  
-    <div class="text-overlay second-overlay">
-      <div class="text-box">
-        <p>Questo è il testo sopra la seconda immagine</p>
+        <p>{{textsArray[i]}}</p>
       </div>
     </div>
   </div>
-  
+</div>
