@@ -21,8 +21,8 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   textsArray = [
-    'Questo è il testo sopra la prima immagine',
-    'Questo è il testo sopra la seconda immagine',
+    'Scopri la nostra accogliente casa in affitto, \nsituata nel cuore di Como, \na pochi passi dal Duomo.',
+    'Seconda immagine',
     'Questo è il testo sopra la terza immagine',
   ];
 
@@ -50,4 +50,8 @@ export class HomeComponent implements AfterViewInit {
       }
     });
   }  
+
+  formatText(text: string): string {
+    return text.replace(/\n/g, '<br>');
+  }
 }

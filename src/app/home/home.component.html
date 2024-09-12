@@ -5,7 +5,7 @@
     <img #image src="{{img.src}}" ngx-parallax />
     <div class="text-overlay" #textOverlay *ngIf="textsArray[i]">
       <div class="text-box">
-        <p>{{textsArray[i]}}</p>
+        <p [innerHTML]="formatText(textsArray[i])"></p>
       </div>
     </div>
   </div>
