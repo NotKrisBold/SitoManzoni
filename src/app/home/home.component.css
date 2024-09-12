@@ -47,3 +47,55 @@ p {
 .text-overlay:nth-of-type(2) {
   margin-top: 100px; /* Regola il margine superiore come necessario */
 }
+
+@media (max-width: 768px) {
+  .image-container img {
+    height: 70vh; /* Imposta l'altezza al 60% dell'altezza della finestra del browser */
+    object-fit: cover; /* Assicurati che l'immagine copra il contenitore senza distorsioni */
+  }
+}
+
+/* Regole per i margini superiori dei testi per evitare sovrapposizioni */
+.text-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Assicura che il testo sia sopra l'immagine */
+  pointer-events: none; /* Rende l'overlay non interattivo */
+}
+
+.text-box {
+  display: inline-block;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+/* Regole per i margini superiori dei testi per evitare sovrapposizioni */
+.text-overlay:nth-of-type(1) {
+  margin-top: 50px; /* Regola il margine superiore come necessario */
+}
+
+.text-overlay:nth-of-type(2) {
+  margin-top: 100px; /* Regola il margine superiore come necessario */
+}
+
+/* Regole per i dispositivi mobili */
+@media (max-width: 768px) {
+  .text-box {
+    padding: 15px;
+    font-size: 0.9rem; /* Riduce la dimensione del testo sui dispositivi mobili */
+  }
+
+  .text-overlay {
+    margin-top: 30px; /* Riduce il margine superiore sui dispositivi mobili */
+  }
+}
