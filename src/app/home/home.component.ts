@@ -9,18 +9,6 @@ import { ParallaxStandaloneDirective } from '@yoozly/ngx-parallax';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  images = [
-    '../../assets/images/casa1.jpg',  
-    '../../assets/images/casa2.jpg',
-    '../../assets/images/casa3.jpg'
-  ];
-
-  texts = [
-    'Benvenuti nella vostra casa vacanze!',
-    'Affitto a lungo termine disponibile',
-    'Contattaci per maggiori informazioni'
-  ];
-
+export class HomeComponent{
   
 }
