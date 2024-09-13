@@ -1,12 +1,41 @@
 <app-navbar></app-navbar>
 
 <div class="parallax-container">
-  <div class="image-container" #imageContainer *ngFor="let img of imagesArray; let i = index">
-    <img #image src="{{img.src}}" ngx-parallax />
-    <div class="text-overlay" #textOverlay *ngIf="textsArray[i]">
-      <div class="text-box">
-        <p [innerHTML]="formatText(textsArray[i])"></p>
-      </div>
+  <!-- Prima immagine -->
+  <div class="image-container">
+    <img src="../../assets/images/casa1.jpg" ngx-parallax />
+  </div>
+
+  <!-- Testo tra la prima e seconda immagine -->
+  <div class="text-overlay-between">
+    <div class="text-box">
+      <p>Scopri la nostra accogliente casa in affitto, situata nel cuore di Como, a pochi passi dal Duomo.</p>
     </div>
   </div>
+
+  <!-- Seconda immagine -->
+  <div class="image-container">
+    <img src="../../assets/images/casa2.jpg" ngx-parallax />
+  </div>
+
+  <!-- Testo tra la seconda e terza immagine -->
+  <div class="text-overlay-between">
+    <div class="text-box">
+      <p>Seconda immagine</p>
+    </div>
+  </div>
+
+  <!-- Terza immagine -->
+  <div class="image-container">
+    <img src="../../assets/images/casa3.jpg" ngx-parallax />
+  </div>
+
+  <!-- Testo sopra la terza immagine -->
+<div class="text-overlay-between">
+  <div class="text-box">
+    <p>Questo è il testo sopra la terza immagine</p>
+  </div>
 </div>
+</div>
+
+

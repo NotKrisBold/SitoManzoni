@@ -1,101 +1,50 @@
 .parallax-container {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  height: auto; /* L'altezza sarà determinata dal contenuto */
 }
 
 .image-container {
+  position: relative;
   width: 100%;
-  position: relative; /* Necessario per posizionare l'overlay assolutamente */
 }
 
 .image-container img {
   width: 100%;
-  height: auto; /* L'immagine si adatta al contenitore */
+  height: 100%;
   object-fit: cover; /* Mantiene le proporzioni dell'immagine */
 }
 
-.text-overlay {
+/* Testo tra le immagini */
+.text-overlay-between {
+  display: inline;
   position: absolute;
   left: 0;
   width: 100%;
   text-align: center;
-  z-index: 1; /* Assicura che il testo sia sopra l'immagine */
-  pointer-events: none; /* Rende l'overlay non interattivo */
+  z-index: 1; /* Il testo deve essere sopra l'immagine */
 }
 
 .text-box {
   display: inline-block;
-  background-color: white;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  max-width: 95%;
   box-sizing: border-box;
+  width: 100%;
 }
 
 p {
   margin: 0;
 }
 
-/* Regole per i margini superiori dei testi per evitare sovrapposizioni */
-.text-overlay:nth-of-type(1) {
-  margin-top: 50px; /* Regola il margine superiore come necessario */
-}
-
-.text-overlay:nth-of-type(2) {
-  margin-top: 100px; /* Regola il margine superiore come necessario */
-}
-
+/* Regole per dispositivi mobili */
 @media (max-width: 768px) {
   .image-container img {
-    height: 70vh; /* Imposta l'altezza al 60% dell'altezza della finestra del browser */
-    object-fit: cover; /* Assicurati che l'immagine copra il contenitore senza distorsioni */
+    height: 80vh; /* Aumenta l'altezza delle immagini */
   }
-}
 
-/* Regole per i margini superiori dei testi per evitare sovrapposizioni */
-.text-overlay {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 1; /* Assicura che il testo sia sopra l'immagine */
-  pointer-events: none; /* Rende l'overlay non interattivo */
-}
-
-.text-box {
-  display: inline-block;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  max-width: 95%;
-  box-sizing: border-box;
-}
-
-p {
-  margin: 0;
-}
-
-/* Regole per i margini superiori dei testi per evitare sovrapposizioni */
-.text-overlay:nth-of-type(1) {
-  margin-top: 50px; /* Regola il margine superiore come necessario */
-}
-
-.text-overlay:nth-of-type(2) {
-  margin-top: 100px; /* Regola il margine superiore come necessario */
-}
-
-/* Regole per i dispositivi mobili */
-@media (max-width: 768px) {
   .text-box {
     padding: 15px;
-    font-size: 0.9rem; /* Riduce la dimensione del testo sui dispositivi mobili */
-  }
-
-  .text-overlay {
-    margin-top: 30px; /* Riduce il margine superiore sui dispositivi mobili */
+    font-size: 0.9rem; /* Riduce la dimensione del testo */
   }
 }
