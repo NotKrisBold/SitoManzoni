@@ -42,7 +42,7 @@ export class HomeComponent implements AfterViewInit {
         const overlayHeight = overlayElement.clientHeight;
         
         // Calcola la posizione al 60% dell'altezza del contenitore
-        const positionTop = (0.6 * containerHeight) - (overlayHeight / 2);
+        const positionTop = (0.7 * containerHeight) - (overlayHeight / 2);
         
         // Aggiungi uno spostamento per evitare la sovrapposizione
         const offset = index * 70; // Adatta questo valore come necessario
