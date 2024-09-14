@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+.section-padding {
+  padding-top: 56px; /* Altezza della navbar fissa */
+}
+
+
 .image-container {
   position: relative;
   width: 100%;

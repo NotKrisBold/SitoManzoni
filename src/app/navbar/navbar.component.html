@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light custom-navbar fixed-top">
-  <a class="navbar-brand custom-nav-link" href="#">Home</a>
+  <a class="navbar-brand custom-nav-link" (click)="scrollTo('home')">Home</a>
   <!-- Pulsante "Hamburger" per i dispositivi mobili -->
   <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,10 +7,9 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="navbar-nav">
-      <a class="nav-item nav-link custom-nav-link" href="#">Features</a>
-      <a class="nav-item nav-link custom-nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link custom-nav-link disabled" href="#">Disabled</a>
+      <a class="nav-item nav-link custom-nav-link" (click)="scrollTo('info')">The apartment</a>
+      <a class="nav-item nav-link custom-nav-link" (click)="scrollTo('location')">Location</a>
+      <a class="nav-item nav-link custom-nav-link disabled">Disabled</a>
     </div>
   </div>
 </nav>
-
