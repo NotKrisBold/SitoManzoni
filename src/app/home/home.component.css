@@ -10,41 +10,116 @@
 
 .image-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  object-fit: cover;
 }
 
-/* Testo tra le immagini */
 .text-overlay-between {
-  display: inline;
   position: absolute;
-  left: 0;
   width: 100%;
-  text-align: center;
-  z-index: 1; /* Il testo deve essere sopra l'immagine */
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Colore bianco con bassa opacità */
+  backdrop-filter: blur(10px); /* Sfocatura di 10px */
+  -webkit-backdrop-filter: blur(10px); /* Supporto per browser WebKit (Safari) */
+  text-align: left;
+  z-index: 2; /* Assicura che il testo sia sopra le immagini */
+  transition: top 0.3s ease; /* Aggiungi una transizione fluida */
+  min-height: 21.5%;
 }
+
+#text-overlay1{
+  margin-top: -5%;
+}
+
 
 .text-box {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  width: 100%;
+  max-width: 40%;
+  height: 100%;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
+
+#text-overlay2 {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  transition: top 0.3s ease;
+  margin-top: 0; /* Modifica qui */
+  height: auto; /* Permetti di adattarsi al contenuto */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#text-overlay2 .text-box,
+#text-overlay2 .map-container {
+  display: block; /* Modifica qui */
+}
+
+.map-container {
+  position: relative; /* Contenitore per la mappa */
+  width: 55%; /* Larghezza al 50% del contenitore principale */
+  padding-top: 35%; /* Padding per mantenere il rapporto quadrato */
+  margin: 2%;
+}
+
+.map-container iframe {
+  position: absolute; /* Posiziona l'iframe all'interno del contenitore */
+  top: 0;
+  left: 0;
+  width: 100%; /* Larghezza al 100% del contenitore */
+  height: 100%; /* Altezza al 100% del contenitore */
+  border: 0;
+}
+
 
 p {
   margin: 0;
 }
 
+@media (max-width: 1000px) {
+  .text-box {
+    padding: 15px;
+    font-size: 0.9rem;
+    max-width: 60%;
+  }
+
+  .map-container{
+    width: 65%;
+  }
+}
+
 /* Regole per dispositivi mobili */
 @media (max-width: 768px) {
   .image-container img {
-    height: 80vh; /* Aumenta l'altezza delle immagini */
+    height: 70vh; /* Adjust as needed */
   }
 
   .text-box {
     padding: 15px;
-    font-size: 0.9rem; /* Riduce la dimensione del testo */
+    font-size: 0.9rem; /* Font size per dispositivi mobili */
+    max-width: 100%;
+  }
+
+  .map-container {
+    width: 95%; /* Occupa l'intera larghezza per dispositivi mobili */
+    padding-top: 75%; /* Aumenta il padding-top per adattarsi meglio alla larghezza */
+  }
+
+  #text-overlay2 .text-box,
+  #text-overlay2 .map-container {
+    font-size: 0.9rem; /* Font size per il contenuto all'interno di #text-overlay2 */
+  }
+
+  h1{
+    font-size: 1.5rem;
   }
 }
