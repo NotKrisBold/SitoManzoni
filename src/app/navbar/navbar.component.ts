@@ -19,7 +19,6 @@ export class NavbarComponent {
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
 
-      //this.disableScroll();
       this.smoothScrollTo(offsetPosition, 2000); // Passa la durata in millisecondi
     }
   }
@@ -43,40 +42,9 @@ export class NavbarComponent {
       else{
         //Force view update
         this.cdr.detectChanges();
-        //this.enableScroll();
       }
     };
 
     requestAnimationFrame(animateScroll);
-  }
-
-  private preventDefault(event: Event): void {
-    event.preventDefault();
-  }
-
-
-  private disableScroll() {
-    // Get the current page scroll position
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-    // if any scroll is attempted,
-    // set this to the previous value
-    window.onscroll = function () {
-        window.scrollTo(scrollLeft, scrollTop);
-    };
-}
-
-
-  private enableScroll() {
-    window.onscroll = function () { };
-  }
-
-
-  private preventDefaultForKey(event: KeyboardEvent): void {
-    const keys = ['ArrowUp', 'ArrowDown', 'Space', 'PageUp', 'PageDown'];
-    if (keys.includes(event.key)) {
-      event.preventDefault();
-    }
   }
 }
