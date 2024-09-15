@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  constructor(private cdr: ChangeDetectorRef) {}
+
   scrollTo(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -18,6 +20,9 @@ export class NavbarComponent {
       const offsetPosition = elementPosition - navbarHeight;
 
       this.smoothScrollTo(offsetPosition, 2000); // Passa la durata in millisecondi
+
+      // Forza l'aggiornamento della vista
+      this.cdr.detectChanges();
     }
   }
 

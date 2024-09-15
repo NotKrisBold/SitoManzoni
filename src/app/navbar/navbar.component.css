@@ -1,31 +1,39 @@
-
-html {
-  scroll-behavior: smooth;
-}
-
 .custom-navbar {
     background-color: rgba(255, 255, 255, 0.4); /* Colore bianco con bassa opacità */
     backdrop-filter: blur(10px); /* Sfocatura di 10px */
     -webkit-backdrop-filter: blur(10px); /* Supporto per browser WebKit (Safari) */
     cursor: pointer;
-  }
+}
 
-  .custom-nav-link {
+.custom-nav-link {
     color: #222020 !important; /* Colore scuro per i link */
     font-size: 1.2rem;
     font-weight: 500;
-  }
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+    user-select: none; /* Prevenire la selezione del testo */
+    outline: none; /* Rimuove il contorno di focus */
+}
 
-  .custom-nav-link:hover {
+.custom-nav-link:focus {
+    outline: none; /* Rimuove il contorno di focus quando il link è attivo */
+    box-shadow: none; /* Rimuove eventuali ombre di focus */
+}
+
+.custom-nav-link:hover {
     color: #000 !important; /* Colore più scuro al passaggio del mouse */
-  }
+}
 
-  @media (max-width: 768px) {
+.custom-navbar .navbar-toggler:focus {
+    outline: none; /* Rimuove il contorno di focus dal pulsante hamburger */
+    box-shadow: none; /* Rimuove eventuali ombre di focus */
+}
+
+@media (max-width: 768px) {
     .custom-nav-link {
-      font-size: 1rem; /* Riduce il font sui dispositivi mobili */
+        font-size: 1rem; /* Riduce il font sui dispositivi mobili */
     }
 
     .custom-navbar {
-      padding: 0.5rem 1rem; /* Riduce il padding per un aspetto più compatto sui cellulari */
+        padding: 0.5rem 1rem; /* Riduce il padding per un aspetto più compatto sui cellulari */
     }
-  }
+}

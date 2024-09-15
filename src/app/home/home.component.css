@@ -11,6 +11,7 @@
 .image-container {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .image-container img {
@@ -71,9 +72,10 @@
 
 .map-container {
   position: relative; /* Contenitore per la mappa */
-  width: 55%; /* Larghezza al 50% del contenitore principale */
-  padding-top: 35%; /* Padding per mantenere il rapporto quadrato */
+  width: 45%; /* Larghezza al 50% del contenitore principale */
+  padding-top: 30%; /* Padding per mantenere il rapporto quadrato */
   margin: 2%;
+  margin-top: 0px;
 }
 
 .map-container iframe {
@@ -85,6 +87,10 @@
   border: 0;
 }
 
+.gallery-container {
+  width: 80%;
+  margin: 2%;
+}
 
 p {
   margin: 0;
