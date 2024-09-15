@@ -13,13 +13,15 @@ export class NavbarComponent {
   scrollTo(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Calcola l'altezza della navbar
+      // Get the height of the navbar only once
       const navbarHeight = document.querySelector('.custom-navbar')?.clientHeight || 0;
-      // Calcola la posizione di scroll
+      // Calculate the scroll position
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
+      //Distanza da scrollare
+      const distance = Math.abs(offsetPosition - window.pageYOffset);
 
-      this.smoothScrollTo(offsetPosition, 2000); // Passa la durata in millisecondi
+      this.smoothScrollTo(offsetPosition, Math.sqrt(distance) * 50);
     }
   }
 
@@ -28,19 +30,23 @@ export class NavbarComponent {
     const distance = targetPosition - startPosition;
     let startTime: number | null = null;
 
+    const easeInOutQuad = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Easing function
+
     const animateScroll = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const easeInOutQuad = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Funzione di easing
+      const progress = Math.min(timeElapsed / duration, 1); // Ensure progress doesn't exceed 1
 
-      window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+      // Only one DOM read and one DOM write per frame (minimize layout thrashing)
+      const easedProgress = easeInOutQuad(progress);
+      const scrollToPosition = startPosition + distance * easedProgress;
+
+      window.scrollTo(0, scrollToPosition);
 
       if (timeElapsed < duration) {
         requestAnimationFrame(animateScroll);
-      }
-      else{
-        //Force view update
+      } else {
+        // Ensure change detection triggers after animation completes
         this.cdr.detectChanges();
       }
     };
