@@ -28,6 +28,13 @@
     box-shadow: none; /* Rimuove eventuali ombre di focus */
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+
 @media (max-width: 768px) {
     .custom-nav-link {
         font-size: 1rem; /* Riduce il font sui dispositivi mobili */

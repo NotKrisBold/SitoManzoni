@@ -22,13 +22,17 @@
 .text-overlay-between {
   position: absolute;
   width: 100%;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.8); /* Colore bianco con bassa opacità */
-  backdrop-filter: blur(10px); /* Sfocatura di 10px */
-  -webkit-backdrop-filter: blur(10px); /* Supporto per browser WebKit (Safari) */
-  text-align: left;
-  z-index: 2; /* Assicura che il testo sia sopra le immagini */
-  transition: top 0.3s ease; /* Aggiungi una transizione fluida */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  transition: top 0.3s ease;
+  margin-top: 0; /* Modifica qui */
+  height: auto; /* Permetti di adattarsi al contenuto */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   min-height: 51.5vh;
 }
 
@@ -47,22 +51,6 @@
   margin-right: 2%;
 }
 
-#text-overlay2 {
-  position: absolute;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 2;
-  transition: top 0.3s ease;
-  margin-top: 0; /* Modifica qui */
-  height: auto; /* Permetti di adattarsi al contenuto */
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 #text-overlay2 .text-box,
 #text-overlay2 .map-container {
   display: block; /* Modifica qui */
@@ -74,6 +62,8 @@
   padding-top: 30%; /* Padding per mantenere il rapporto quadrato */
   margin: 2%;
   margin-top: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .map-container iframe {
@@ -88,6 +78,7 @@
 .gallery-container {
   width: 60%;
   margin: 2%;
+  margin-top: 0px;
 }
 
 p {
@@ -104,10 +95,18 @@ p {
   .map-container{
     width: 65%;
   }
+
+  .gallery-container{
+    width: 65%;
+  }
 }
 
 /* Regole per dispositivi mobili */
 @media (max-width: 768px) {
+  .text-overlay-between {
+    min-height: 32.5vh;
+  }
+
   .image-container img {
     height: 70vh; /* Adjust as needed */
   }
@@ -126,6 +125,10 @@ p {
   #text-overlay2 .text-box,
   #text-overlay2 .map-container {
     font-size: 0.9rem; /* Font size per il contenuto all'interno di #text-overlay2 */
+  }
+
+  .gallery-container{
+    width: 95%;
   }
 
   h1{
