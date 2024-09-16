@@ -70,6 +70,35 @@
   margin-bottom: 0px;
 }
 
+.apartment-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  max-width: 100%;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  text-align: center;
+  gap: 30%;
+  width: 100%;
+}
+
+.info-number {
+  font-size: 8rem;
+  color: #7d7d7d;
+}
+
+.info-label {
+  color: #7d7d7d;
+  letter-spacing: 1px;
+  margin-top: 1%;
+}
+
+
 .location-container {
   display: flex;
   justify-content: space-between; /* Mantiene il layout flessibile con spazio tra le due colonne */
@@ -204,7 +233,31 @@ p {
     width: 95%;
   }
 
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 colonne su schermi medi (tablet) */
+    gap: 10%; /* Riduci il gap per adattarlo a schermi più piccoli */
+  }
+
+  .info-number {
+    font-size: 6rem; /* Riduci la dimensione del numero su schermi medi */
+  }
+
   h1 {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .info-grid {
+      grid-template-columns: 1fr; /* Una colonna singola su schermi piccoli (cellulari) */
+      gap: 5%; /* Riduci ulteriormente il gap */
+    }
+  
+    .info-number {
+      font-size: 4rem; /* Riduci ulteriormente la dimensione del numero su schermi molto piccoli */
+    }
+  
+    .info-label {
+      font-size: 1.2rem; /* Riduci leggermente il testo delle etichette per schermi piccoli */
+    }
   }
 }
