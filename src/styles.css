@@ -1,15 +1,7 @@
-.text-box {
+.text-box, .navbar-nav, p, a {
   font-family: 'Montserrat', sans-serif;
-}
-
-.navbar-nav {
-    font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-family: 'Montserrat', sans-serif;
-}
-
-a{
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem; /* o 18px per una dimensione tra medium e large */
 }

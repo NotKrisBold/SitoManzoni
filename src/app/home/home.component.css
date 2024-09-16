@@ -11,6 +11,7 @@
   width: 100%;
   height: auto;
   clear: both; /* Previene sovrapposizioni o problemi di layout */
+  user-select: none;
 }
 
 .image-container img {
@@ -34,6 +35,8 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 51.5vh;
+  margin-bottom: 1px;
+  user-select: none;
 }
 
 #text-overlay1{
@@ -46,40 +49,88 @@
   box-sizing: border-box;
   max-width: 40%;
   height: 100%;
-  margin-top: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-#text-overlay2 .text-box,
-#text-overlay2 .map-container {
-  display: block; /* Modifica qui */
-}
-
-.map-container {
-  position: relative; /* Contenitore per la mappa */
-  width: 45%; /* Larghezza al 50% del contenitore principale */
-  padding-top: 30%; /* Padding per mantenere il rapporto quadrato */
   margin: 2%;
-  margin-top: 0px;
+}
+
+#text-overlay2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centra il testo */
 }
 
-.map-container iframe {
-  position: absolute; /* Posiziona l'iframe all'interno del contenitore */
+#text-overlay2 .text-box, 
+#text-overlay2 .map-container, 
+#text-overlay2 .gallery-container {
+  text-align: center; /* Centra il testo anche all'interno di ogni blocco */
+}
+
+#text-overlay2 .text-box {
+  max-width: 80%; /* Rimuove qualsiasi limitazione di larghezza per centrare tutto correttamente */
+}
+
+#location h1, #gallery h1 {
+  margin-bottom: 0px;
+}
+
+.location-container {
+  display: flex;
+  justify-content: space-between; /* Mantiene il layout flessibile con spazio tra le due colonne */
+  align-items: center;            /* Centra verticalmente il contenuto */
+  width: 100%;
+}
+
+.location-text,
+.location-map {
+  width: 50%;                     /* Assegna esattamente il 50% a entrambe */
+  box-sizing: border-box;          /* Include padding e bordi nella larghezza totale */
+  padding: 0 10px;                /* Aggiungi un po' di padding interno se necessario */
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;             /* Centra il testo orizzontalmente e verticalmente */
+}
+
+.location-map {
+  position: relative;
+  padding-top: 30%;               /* Mantiene il rapporto 16:9 */
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.location-map iframe {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Larghezza al 100% del contenitore */
-  height: 100%; /* Altezza al 100% del contenitore */
+  width: 100%;
+  height: 100%;
   border: 0;
 }
 
 .gallery-container {
-  width: 60%;
+  width: 50%;
   margin: 2%;
   margin-top: 0px;
+  margin-bottom: 5%;
+  user-select: none;
 }
+
+.custom-hr {
+  width: 90%; /* Imposta la larghezza della riga */
+  margin: 1%; /* Centra la riga orizzontalmente e aggiunge uno spazio sopra e sotto */
+  margin-bottom: 0px;
+  border: 1px solid #8d8d8d; /* Puoi personalizzare il colore e lo spessore del bordo */
+  opacity: 0.8; /* Imposta un po' di trasparenza, se desiderato */
+}
+
+h1 {
+  margin-bottom: 2%;
+}
+
 
 p {
   margin: 0;

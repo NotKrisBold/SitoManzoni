@@ -9,7 +9,7 @@
   <!-- Testo tra la prima e seconda immagine -->
   <div class="text-overlay-between" id="text-overlay1">
     <div class="text-box">
-      <h1>The window on the dome</h1>
+      <h1>THE WINDOW ON THE DOME</h1>
       <p>Romani, gens fortissima ac bellicosissima, ab origine urbis suae non solum regna vicina subiecerunt, sed etiam terrarum orbis imperium paulatim amplificaverunt. Narrantur enim a scriptoribus antiquis multae res gestae, quibus virtus ac prudentia ducum Romanorum praecipue in luce ponuntur. </p>
     </div>
   </div>
@@ -20,25 +20,38 @@
   </div>
 
   <!-- Testo tra la seconda e la terza immagine -->
-  <div class="text-overlay-between">
+  <div class="text-overlay-between" id="text-overlay2">
     <div class="text-box" id="info">
-      <h1>The apartment</h1>
+      <h1>THE APARTMENT</h1>
       <p>Romani, gens fortissima ac bellicosissima, ab origine urbis suae non solum regna vicina subiecerunt, sed etiam terrarum orbis imperium paulatim amplificaverunt. Narrantur enim a scriptoribus antiquis multae res gestae, quibus virtus ac prudentia ducum Romanorum praecipue in luce ponuntur. Ex his clarissimus est bellum Gallicum, quod a Gaio Iulio Caesare, duce fortissimo ac peritissimo, contra Gallos gestum est. Caesar, cum in Galliam ingressus esset, animadvertit Gallos esse populum ingenii ac animi pernicissimi, qui tamen inter se divisi erant. Hac dissensione Caesar sapienter usus est. Nam, dum Gallos disiectos et sine communi capite esse videbat, singulas civitates oppugnare et vincere constituit. Multae civitates, cum resistere conatae essent, Caesaris virtutem ac disciplinam Romanam superare non potuerunt. Quod cum factum esset, omnis Gallia sub imperium populi Romani venit.</p>
     </div>
+
+    <hr class="custom-hr">
+
     <div class="text-box" id="location">
-      <h1>The position</h1>
+      <h1>THE POSITION</h1>
     </div>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.2298782752563!2d9.084653583149558!3d45.81287030159132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869db60a86b901%3A0x65ed0267ce0b6c0e!2sVia%20Alessandro%20Manzoni%2C%202%2C%2022100%20Como%20CO!5e0!3m2!1sit!2sit!4v1726330332227!5m2!1sit!2sit"
-      width="100%"  
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy"
-      ></iframe>
+
+    <div class="location-container">
+      <!-- Colonna Sinistra -->
+      <div class="location-text">
+        <p>Romani, gens fortissima ac bellicosissima, ab origine urbis suae...</p>
+      </div>
+
+      <!-- Colonna Destra -->
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d695.2298782752563!2d9.084653583149558!3d45.81287030159132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869db60a86b901%3A0x65ed0267ce0b6c0e!2sVia%20Alessandro%20Manzoni%2C%202%2C%2022100%20Como%20CO!5e0!3m2!1sit!2sit!4v1726330332227!5m2!1sit!2sit"
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          ></iframe>
+        </div>
     </div>
+
+    <hr class="custom-hr">
+
     <div class="text-box" id="gallery">
-      <h1>Gallery</h1>
+      <h1>GALLERY</h1>
     </div>
     <div class="gallery-container">
       <app-gallery></app-gallery>
@@ -47,5 +60,9 @@
 
   <div class="image-container">
     <img src="../../assets/images/casa2.jpg" ngx-parallax />
+  </div>
+
+  <div class="image-container">
+    <img src="../../assets/images/casa5.jpg" ngx-parallax />
   </div>
 </div>
