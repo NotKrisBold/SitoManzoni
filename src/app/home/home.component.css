@@ -49,7 +49,7 @@
   box-sizing: border-box;
   max-width: 40%;
   height: 100%;
-  margin: 2%;
+  margin: 1%;
 }
 
 #text-overlay2 {
@@ -64,10 +64,6 @@
 #text-overlay2 .map-container, 
 #text-overlay2 .gallery-container {
   text-align: center; /* Centra il testo anche all'interno di ogni blocco */
-}
-
-#text-overlay2 .text-box {
-  max-width: 80%; /* Rimuove qualsiasi limitazione di larghezza per centrare tutto correttamente */
 }
 
 #location h1, #gallery h1 {
@@ -158,7 +154,7 @@ p {
     min-height: 30vh;
   }
 
-  #text-overlay1{
+  #text-overlay1 {
     margin-top: -1px;
   }
 
@@ -172,9 +168,31 @@ p {
     max-width: 100%;
   }
 
-  .map-container {
-    width: 95%; /* Occupa l'intera larghezza per dispositivi mobili */
-    padding-top: 75%; /* Aumenta il padding-top per adattarsi meglio alla larghezza */
+  .location-container {
+    flex-direction: column; /* Cambia la direzione del layout in colonna */
+    align-items: stretch; /* Permette agli elementi di occupare l'intera larghezza */
+  }
+
+  .location-text,
+  .location-map {
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza totale */
+    padding: 0 10px; /* Aggiungi un po' di padding interno se necessario */
+    margin-bottom: 3%;
+  }
+
+  .location-map {
+    position: relative;
+    padding-top: 56%; /* Imposta un padding-top per mantenere il rapporto 16:9 */
+  }
+
+  .location-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 
   #text-overlay2 .text-box,
@@ -182,11 +200,11 @@ p {
     font-size: 0.9rem; /* Font size per il contenuto all'interno di #text-overlay2 */
   }
 
-  .gallery-container{
+  .gallery-container {
     width: 95%;
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
 }
