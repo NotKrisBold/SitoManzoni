@@ -233,8 +233,12 @@ p {
     width: 95%;
   }
 
+  .apartment-info {
+    margin-bottom: 7%;
+  }
+
   .info-grid {
-    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 colonne su schermi medi (tablet) */
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 colonne su schermi medi */
     gap: 10%; /* Riduci il gap per adattarlo a schermi più piccoli */
   }
 
@@ -247,8 +251,12 @@ p {
   }
 
   @media (max-width: 480px) {
+    .apartment-info {
+      margin-bottom: 7%;
+    }
+
     .info-grid {
-      grid-template-columns: 1fr; /* Una colonna singola su schermi piccoli (cellulari) */
+      grid-template-columns: repeat(2, 1fr); /* Cambia a una griglia 2x2 su schermi piccoli */
       gap: 5%; /* Riduci ulteriormente il gap */
     }
   
