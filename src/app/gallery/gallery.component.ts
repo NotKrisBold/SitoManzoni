@@ -13,39 +13,28 @@ export class GalleryComponent {
   images: any[] = [
     {
       itemImageSrc: '../../assets/images/casa1.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa1.jpg',
       alt: 'Description of image 1',
       title: 'Title of image 1'
     },
     {
       itemImageSrc: '../../assets/images/casa2.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa2.jpg',
       alt: 'Description of image 2',
       title: 'Title of image 2'
     },
     {
       itemImageSrc: '../../assets/images/casa3.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa3.jpg',
       alt: 'Description of image 3',
       title: 'Title of image 3'
     },
     {
-      itemImageSrc: '../../assets/images/casa1.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa1.jpg',
+      itemImageSrc: '../../assets/images/casa4.png',
       alt: 'Description of image 1',
       title: 'Title of image 1'
     },
     {
-      itemImageSrc: '../../assets/images/casa2.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa2.jpg',
-      alt: 'Description of image 2',
-      title: 'Title of image 2'
-    },
-    {
-      itemImageSrc: '../../assets/images/casa3.jpg',
-      thumbnailImageSrc: '../../assets/thumbnails/casa3.jpg',
-      alt: 'Description of image 3',
-      title: 'Title of image 3'
+      itemImageSrc: '../../assets/images/casa5.jpg',
+      alt: 'Description of image 1',
+      title: 'Title of image 1'
     }
   ];
 

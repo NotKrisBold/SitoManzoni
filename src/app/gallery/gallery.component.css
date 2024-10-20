@@ -1,0 +1,11 @@
+img {
+    max-height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.gallery-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    max-height: 100%;
+    max-width: 100%;
+}

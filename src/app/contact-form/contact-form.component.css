@@ -1,0 +1,97 @@
+/* Container for the two sections */
+.form-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Left side styling (Message field) */
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+
+  }
+  
+  /* Right side styling (Name and Email) */
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;     /* Center vertically */
+  }
+  
+  /* Input and textarea styling */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  /* Center textarea (Message) horizontally */
+  textarea {
+    align-self: center;  /* Center horizontally */
+    min-height: 300px;
+    width: 90%;          /* Make the message box slightly smaller than 100% */
+    resize: none;
+  }
+  
+  /* Change border color on focus */
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 10%;
+    margin-bottom: 1%;
+  }
+  
+  /* Change button background on hover */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Disable button styling */
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Error message styling */
+  small {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Margin for form fields */
+  div {
+    margin-bottom: 15px;
+  }
+
+@media (max-width: 768px) {
+    textarea {
+        min-height: 100%;
+    }
+
+    button[type="submit"] {
+        width: 25%;
+    }
+}

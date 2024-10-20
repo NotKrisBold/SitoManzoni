@@ -5,3 +5,15 @@
   font-style: normal;
   font-size: 1.2rem; /* o 18px per una dimensione tra medium e large */
 }
+
+/* Rimuove l'evidenziazione del bordo per i pulsanti della galleria */
+.p-galleria .p-galleria-item-prev,
+.p-galleria .p-galleria-item-next {
+    border: none !important; /* Rimuove il bordo */
+    box-shadow: none !important; /* Rimuove eventuali ombre */
+}
+
+.p-galleria .p-galleria-item-prev:focus,
+.p-galleria .p-galleria-item-next:focus {
+    outline: none !important; /* Rimuove l'evidenziazione al focus */
+}

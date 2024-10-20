@@ -137,11 +137,16 @@
 }
 
 .gallery-container {
-  width: 50%;
+  max-height: 768px;
+  width: 80%;   
   margin: 2%;
   margin-top: 0px;
-  margin-bottom: 5%;
   user-select: none;
+  position: relative;
+}
+
+.contact-form-container {
+  width: 90%;
 }
 
 .custom-hr {
@@ -169,10 +174,6 @@ p {
   }
 
   .map-container{
-    width: 65%;
-  }
-
-  .gallery-container{
     width: 65%;
   }
 }
@@ -227,10 +228,6 @@ p {
   #text-overlay2 .text-box,
   #text-overlay2 .map-container {
     font-size: 0.9rem; /* Font size per il contenuto all'interno di #text-overlay2 */
-  }
-
-  .gallery-container {
-    width: 95%;
   }
 
   .apartment-info {
