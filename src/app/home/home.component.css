@@ -1,6 +1,7 @@
 .parallax-container {
   position: relative;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 .section-padding {
@@ -40,7 +41,7 @@
 }
 
 #text-overlay1{
-  margin-top: 0%;
+  margin-top: -5%;
 }
 
 .text-box {
@@ -74,7 +75,7 @@
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   max-width: 100%;
 }
 
@@ -98,6 +99,30 @@
   margin-top: 1%;
 }
 
+.amenities-container {
+  margin-top: 7%;
+  text-align: center; /* Centro il titolo e il testo */
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Griglia responsiva */
+  gap: 20px; /* Spaziatura tra le icone */
+  justify-items: center; /* Centro le icone nella griglia */
+  margin-top: 2%;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centro le icone e il testo */
+  color: #7d7d7d; /* Colore del testo */
+}
+
+.amenity-item i {
+  font-size: 2rem; /* Dimensione delle icone */
+  margin-bottom: 5px; /* Spazio tra icona e testo */
+}
 
 .location-container {
   display: flex;
@@ -118,6 +143,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;             /* Centra il testo orizzontalmente e verticalmente */
+}
+
+.location-text p {
+  width: 50%;
 }
 
 .location-map {
@@ -147,6 +176,7 @@
 
 .contact-form-container {
   width: 90%;
+  margin-bottom: 20%;
 }
 
 .custom-hr {
@@ -156,6 +186,11 @@
   border: 1px solid #8d8d8d; /* Puoi personalizzare il colore e lo spessore del bordo */
   opacity: 0.8; /* Imposta un po' di trasparenza, se desiderato */
 }
+
+.contact-form-container p {
+  margin-bottom: 2%;
+}
+
 
 h1 {
   margin-bottom: 2%;
@@ -178,6 +213,10 @@ p {
   }
   
   .gallery-container {
+    width: 95%;
+  }
+
+  .location-text p {
     width: 95%;
   }
 }
@@ -245,6 +284,10 @@ p {
 
   .info-number {
     font-size: 6rem; /* Riduci la dimensione del numero su schermi medi */
+  }
+
+  .contact-form-container {
+    margin-bottom: 5%;
   }
 
   h1 {
