@@ -17,3 +17,9 @@
 .p-galleria .p-galleria-item-next:focus {
     outline: none !important; /* Rimuove l'evidenziazione al focus */
 }
+
+@media (max-width: 1000px) {
+  .text-box, .navbar-nav, p, a {
+    font-size: 1rem; /* o 18px per una dimensione tra medium e large */
+  }
+}
