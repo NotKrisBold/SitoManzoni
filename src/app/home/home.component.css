@@ -219,6 +219,10 @@ p {
   .location-text p {
     width: 95%;
   }
+
+  #text-overlay2{
+    margin-top: 5%;
+  }
 }
 
 /* Regole per dispositivi mobili */
