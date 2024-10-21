@@ -137,8 +137,8 @@
 }
 
 .gallery-container {
-  max-height: 768px;
-  width: 80%;   
+  width: 70%;
+  height: fit-content;
   margin: 2%;
   margin-top: 0px;
   user-select: none;
@@ -175,6 +175,10 @@ p {
 
   .map-container{
     width: 65%;
+  }
+  
+  .gallery-container {
+    width: 95%;
   }
 }
 
