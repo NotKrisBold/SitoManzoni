@@ -216,6 +216,10 @@ p {
     width: 95%;
   }
 
+  .location-map {
+    padding-top: 50%;         
+  }
+
   .location-text p {
     width: 95%;
   }
