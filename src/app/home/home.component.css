@@ -59,6 +59,7 @@
   align-items: center;
   justify-content: center;
   text-align: center; /* Centra il testo */
+  margin-top: -20%;
 }
 
 #text-overlay2 .text-box, 
